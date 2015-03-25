@@ -15,3 +15,5 @@ Install with:
 `
 docker run -d -p 80:80 \ --name erpnext \ -v /srv/docker/owncloud/erpnext/mysql:/var/lib/mysql \ davidgu/erpnext
 `
+
+Login on http://localhost with Administrator / admin
