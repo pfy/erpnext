@@ -62,4 +62,3 @@ apt-get -y remove build-essential python-dev python-software-properties libmaria
 libssl-dev  && apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/ /home/$FRAPPE_USER/.cache
 
 
-cp -a /var/lib/mysql /var/lib/mysql.bak

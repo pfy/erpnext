@@ -13,10 +13,8 @@ RUN useradd $FRAPPE_USER && mkdir /home/$FRAPPE_USER && chown -R $FRAPPE_USER.$F
 WORKDIR /home/$FRAPPE_USER
 COPY setup.sh /
 RUN  bash /setup.sh
-VOLUME ["/var/lib/mysql", ]
+VOLUME ["/var/lib/mysql", "/home/frappe/frappe-bench/sites/site1.local/"]
 COPY all.conf /etc/supervisor/conf.d/
 EXPOSE 80
-COPY run.sh /
 
-
-CMD ["bash","/run.sh"]
+CMD ["/usr/bin/supervisord","-n"]
