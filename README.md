@@ -14,7 +14,7 @@ Install with:
 
 
 ## run data container
-`docker create -v /srv/docker/owncloud/erpnext/site1.local -v /var/lib/mysql --name erpdata davidgu/erpnext
+`docker create -v /home/frappe/frappe-bench/sites/site1.local/ -v /var/lib/mysql --name erpdata davidgu/erpnext
 `
 ## run erpnext
 `docker run -d -p 80:80 --name erpnext --volumes-from erpdata davidgu/erpnext
