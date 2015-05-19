@@ -15,6 +15,7 @@ COPY setup.sh /
 RUN  bash /setup.sh
 VOLUME ["/var/lib/mysql", "/home/frappe/frappe-bench/sites/site1.local/"]
 COPY all.conf /etc/supervisor/conf.d/
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/
 EXPOSE 80
 
 CMD ["/usr/bin/supervisord","-n"]
