@@ -20,4 +20,7 @@ Install with:
 `docker run -d -p 80:80 --name erpnext --volumes-from erpdata davidgu/erpnext
 `
 
-Login on http://localhost with Administrator / admin
+## get passwords
+`docker exec -ti erpnext cat /root/frappe_passwords.txt
+`
+Login on http://localhost with Administrator / password
