@@ -11,7 +11,7 @@ WORKDIR /home/$FRAPPE_USER
 
 COPY setup.sh /
 RUN  bash /setup.sh
-RUN apt-get -y remove build-essential python-dev python-software-properties libmariadbclient-dev libxslt1-dev libcrypto++-dev \
+RUN apt-get -y remove build-essential python-dev python-software-properties libxslt1-dev libcrypto++-dev \
 libssl-dev  && apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/ /home/$FRAPPE_USER/.cache
 
 
